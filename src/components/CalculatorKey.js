@@ -8,7 +8,7 @@ class CalculatorKey extends React.Component {
 
     render() {
         return (
-            <div className="Button">
+            <div>
                 <Button className="Button" size="large" onClick={this.props.onClick} value={this.props.value} block>{this.props.name}</Button>
             </div>
         )

@@ -1,6 +1,7 @@
 .Display {
 
-    background-color: beige;
-    color : dimgray;
+    background-color: linen;
+    font-size: 70px;
+    height: 100px;
     margin:auto;
 }
