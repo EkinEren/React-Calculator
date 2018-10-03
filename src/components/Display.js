@@ -1,11 +1,11 @@
 import React from "react";
 import '../styles/Display.css';
 
-class CalcDisplay extends React.Component {
+class Display extends React.Component {
 
     render() {
-        return (
 
+        return (
             <div className="Display">
                 <div>{this.props.value}</div>
             </div>
@@ -13,8 +13,4 @@ class CalcDisplay extends React.Component {
     }
 }
 
-CalcDisplay.defaultProps = {
-    value: '0'
-};
-
-export default CalcDisplay;
+export default Display;
