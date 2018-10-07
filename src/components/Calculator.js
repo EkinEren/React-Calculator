@@ -1,8 +1,11 @@
 import React from "react";
 import ButtonPanel from "./ButtonPanel";
 import { CalculatorOperations } from "./operations";
+import { Decimal } from "decimal.js";
 import Display from "./Display";
 import '../styles/Calculator.css';
+
+Decimal.set({ precision: 6, rounding: 5, maxE: 2e7 });
 
 /* Implementation of Calculator. States value & displayValue are used for two values to be aritmethicly operated on respectively.
 DisplayValue is the value seen in calculator display.*/
@@ -25,12 +28,12 @@ class Calculator extends React.Component {
 
         if (waitingForOperand) {
             this.setState({
-                displayValue: String(digit),
+                displayValue: String(new Decimal(digit)),
                 waitingForOperand: false
             })
         } else {
             this.setState({
-                displayValue: displayValue === '0' ? String(digit) : displayValue + digit
+                displayValue: displayValue === '0' ? String(new Decimal(digit)) : displayValue + String(new Decimal(digit))
             })
         }
     }
@@ -49,7 +52,7 @@ class Calculator extends React.Component {
 
             this.setState({
                 value: newValue,
-                displayValue: String(newValue)
+                displayValue: String(new Decimal(newValue))
             })
         }
 

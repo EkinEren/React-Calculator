@@ -1,5 +1,6 @@
 import React from "react";
 import '../styles/Display.css';
+import { Input } from 'antd';
 
 class Display extends React.Component {
 
@@ -7,7 +8,7 @@ class Display extends React.Component {
 
         return (
             <div className="Display">
-                <div>{this.props.value}</div>
+                <Input className="Display" type="text" readOnly value={this.props.value}></Input>
             </div>
         );
     }

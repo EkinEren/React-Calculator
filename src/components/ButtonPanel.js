@@ -10,6 +10,7 @@ class ButtonPanel extends React.Component {
 
     handleNumber = (e) => {
         this.props.onDigit(e.target.value);
+        console.log(e.target.value);
     };
 
     render() {
@@ -20,7 +21,7 @@ class ButtonPanel extends React.Component {
                     <CalculatorKey name="1" value={1} onClick={this.handleNumber}></CalculatorKey>
                     <CalculatorKey name="4" value={4} onClick={this.handleNumber}></CalculatorKey>
                     <CalculatorKey name="7" value={7} onClick={this.handleNumber}></CalculatorKey>
-                    <CalculatorKey name="0" className="ButtonZero" value={0} onClick={this.handleNumber}></CalculatorKey>
+                    <CalculatorKey name="0" value={0} onClick={this.handleNumber}></CalculatorKey>
                 </ButtonGroup>
                 <ButtonGroup>
                     <CalculatorKey name="+-" value="toggle" onClick={this.props.onSignChange}></CalculatorKey>
@@ -34,7 +35,7 @@ class ButtonPanel extends React.Component {
                     <CalculatorKey name="3" value={3} onClick={this.handleNumber}></CalculatorKey>
                     <CalculatorKey name="6" value={6} onClick={this.handleNumber}></CalculatorKey>
                     <CalculatorKey name="9" value={9} onClick={this.handleNumber}></CalculatorKey>
-                    <CalculatorKey name="lol"></CalculatorKey>
+                    <CalculatorKey name="thx"></CalculatorKey>
                 </ButtonGroup>
                 <ButtonGroup>
                     <CalculatorKey name="/" value="/" onClick={this.props.onOperation}></CalculatorKey>

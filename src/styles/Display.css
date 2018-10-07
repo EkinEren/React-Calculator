@@ -1,7 +1,12 @@
 .Display {
 
-    background-color: linen;
+    font-size: 40px;
+    height:100px;
+    text-align: right;
+    background-color: aliceblue;
+
+    /*background-color: linen;
     font-size: 70px;
     height: 100px;
-    margin:auto;
+    margin:auto;*/
 }
